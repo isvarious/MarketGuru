@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="734.0" prefWidth="1344.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Guru">
+   <children>
+      <Pane layoutX="14.0" prefHeight="734.0" prefWidth="1235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutX="3.0" layoutY="5.0" prefHeight="32.0" prefWidth="1344.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Import File">
+                  <items>
+                    <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#openFile" text="Open JSON File" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Export File">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#exportQuestions" text="Save Questions to File" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <ListView fx:id="commentList" layoutX="18.0" layoutY="118.0" prefHeight="451.0" prefWidth="1310.0" />
+            <ListView fx:id="questionList" layoutX="17.0" layoutY="617.0" prefHeight="72.0" prefWidth="1310.0" />
+            <TextArea fx:id="includeText" layoutX="964.0" layoutY="70.0" prefHeight="32.0" prefWidth="271.0" />
+            <Button fx:id="exportQuestion" layoutX="609.0" layoutY="688.0" mnemonicParsing="false" onAction="#exportQuestions" prefHeight="32.0" prefWidth="128.0" text="Export Questions" visible="false" />
+            <Button fx:id="filterResult" layoutX="1244.0" layoutY="76.0" mnemonicParsing="false" onAction="#filterResults" text="Filter Results" />
+            <Text fx:id="commentCount" layoutX="18.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments: " wrappingWidth="329.9999851603061" />
+            <Text fx:id="questionCount" layoutX="18.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions: " wrappingWidth="521.9999880939722" />
+            <Button fx:id="addComment" layoutX="1205.0" layoutY="574.0" mnemonicParsing="false" onAction="#addComment" prefHeight="25.0" prefWidth="122.0" text="Add Question" />
+            <Button fx:id="removeQuestion" layoutX="18.0" layoutY="688.0" mnemonicParsing="false" onAction="#removeQuestions" prefHeight="25.0" prefWidth="115.0" text="Remove Question" />
+            <Button fx:id="removeDuplicate" layoutX="737.0" layoutY="423.0" mnemonicParsing="false" onAction="#removeDuplicates" prefHeight="25.0" prefWidth="128.0" text="Remove Duplicates" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
